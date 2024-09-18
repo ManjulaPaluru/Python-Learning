@@ -1,0 +1,31 @@
+from selenium import webdriver
+
+opt = webdriver.ChromeOptions()
+opt.add_argument("headless")
+opt.add_argument("--ignore-certification-errors")
+opt.add_argument("--start-maximized")
+opt.add_argument("disable-popup-blocking")
+driver = webdriver.Chrome(options=opt)
+driver.get("https://demo.nopcommerce.com")
+print(driver.title)
+driver.quit()
+
+
+# opt = webdriver.EdgeOptions()
+# opt.add_argument("headless")
+# opt.add_argument("--ignore-certification-errors")
+# opt.add_argument("--start-maximized")
+# opt.add_argument("disable-popup-blocking")
+# driver = webdriver.Edge(options=opt)
+# driver.get("https://demo.nopcommerce.com")
+# print(driver.title)
+
+opt = webdriver.FirefoxOptions()
+opt.add_argument("headless")
+opt.add_argument("--ignore-certification-errors")
+opt.add_argument("--start-maximized")
+opt.add_argument("disable-popup-blocking")
+driver = webdriver.Firefox(options=opt)
+driver.get("https://demo.nopcommerce.com")
+print(driver.title)
+driver.quit()
